@@ -14,7 +14,7 @@ router.get('/addCard', function(req,res, next){
 })
 
 router.get('/getBoard', function(req, res,next){
-  trello.getCard(function(){
+  trello.getBoards(function(){
 
   })
 })

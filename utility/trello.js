@@ -2,9 +2,9 @@ var Trello = require('trello');
 
 var trello = new Trello('31d325be1f01a6fc44dc51db6dc63f88', '6d80a3eded49d7a88b16efc5b601745b88a48637159651f6885afc01bf0dde5d');
 
-exports.addCardTODO = function(callback){
+exports.addCardTODO = function(name, desc, callback){
 
-    trello.addCard('Clean car', 'Wax on, wax off', '5df342eb9a2497638c2e7d22',
+    trello.addCard(name, desc, '5df342eb9a2497638c2e7d22',
         function (error, trelloCard) {
             if (error) {
                 console.log(error)
@@ -15,7 +15,7 @@ exports.addCardTODO = function(callback){
         })
 }
 
-exports.getCard = function(callback) {
+exports.getBoards = function(callback) {
 
     trello.getBoards('5dd79b7456259d09ca4fac1a', function(error, result){
         if (error) console.log(error)
@@ -24,8 +24,8 @@ exports.getCard = function(callback) {
     })
 }
 
-exports.addList = function(callback){
-    trello.addListToBoard('5df342eb9a2497638c2e7d21', 'List', function(error, result){
+exports.addList = function(name, callback){
+    trello.addListToBoard('5df342eb9a2497638c2e7d21', name, function(error, result){
         if (error) console.log('Error: ' + error)
         else console.log('Added list: ' + result)
         callback()
