@@ -35,8 +35,8 @@ router.get('/getBoard', function(req, res,next){
   })
 })
 
-router.get('/addList', function(req,res,next){
-  trello.addList(function(){
+router.get('/addList/:name', function(req,res,next){
+  trello.addList(req.params.name,function(){
 
   })
 })
@@ -47,4 +47,39 @@ router.get('/getLists', function(req,res,next){
   })
 })
 
+router.get('/addTeamMemberToBoard/:memberId', function(req,res,next){
+    trello.addTeamMemberToBoard(req.params.memberId, function(){
+
+    })
+})
+
+router.get('/addTeamMemberToCard/:memberId/:cardId', function(req,res, next){
+    trello.addTeamMemberToCard(req.params.cardId, req.params.memberId, function(){
+
+    })
+})
+
+router.get('/deleteCard/:cardId', function(req,res,next){
+    trello.deleteCard(req.params.cardId, function(){
+
+    })
+})
+
+router.get('/updateCardName/:cardId/:name', function(req, res, next){
+    trello.updateCardName(req.params.cardId, req.params.name, function(){
+
+    })
+})
+
+router.get('/updateListName/:listId/:name', function(req, res, next){
+    trello.updateListName(req.params.listId, req.params.name, function(){
+
+    })
+})
+
+router.get('/addDueDateToCard/:cardId/:date', function(req,res, next){
+    trello.addDueDateToCard(req.params.cardId, req.params.date, function(){
+        
+    })
+})
 module.exports = router;
