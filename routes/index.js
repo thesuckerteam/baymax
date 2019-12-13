@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.get('/addCard', function(req,res, next){
+router.get('/addCardTODO', function(req,res, next){
   trello.addCardTODO(function(){
 
   })
