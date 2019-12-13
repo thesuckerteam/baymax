@@ -10,7 +10,7 @@ exports.addCardTODO = function(name, desc, callback){
                 console.log(error)
             } else {
                 console.log('Added card: ' + trelloCard)
-                callback()
+                callback(error, trelloCard)
             }
         })
 }
