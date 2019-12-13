@@ -31,6 +31,36 @@ router.get('/getLists', function(req,res,next){
   })
 })
 
+router.get('/addCardDOING',function(req,res,next){
+  trello.addCardDOING(function(){
+
+  })
+})
+
+router.get('/addCardDONE',function(req,res,next){
+  trello.addCardDONE(function(){
+    
+  })
+})
+
+router.get('/deleteCard',function(req,res,next){
+  trello.deleteCard(function(){
+    
+  })
+})
+
+router.get('/updateCardName',function(req,res,next){
+  trello.updateCardName(function(){
+    
+  })
+})
+
+router.get('/updateListName',function(req,res,next){
+  trello.up(function(){
+    
+  })
+})
+
 
 
 module.exports = router;
