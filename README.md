@@ -30,8 +30,10 @@ List of all endpoints are in the /routes/BaymaxAPI.js . To stop the server press
 
 ## Members
 
-GitHub       |           Name           |
--------------|--------------------------|
-bankeez      |   Piyawat Setthitikun    |
-kimvcp       |   Vichaphol Thamsuthikul |
-Kittinske15  |   Kittin Vatabutr        |
+ Student ID   |    GitHub     |        Name           
+--------------|---------------|---------------------------
+ 6010545854   |  bankkeez     |   Piyawat Setthitikun    
+ 6010545897   |  kimvcp       |   Vichaphol Thamsuthikul 
+ 6010546630   |  Kittinske15  |   Kittin Vatabutr
+ 6210041655   |  Osksvn       |   Oskar Svensson
+ 6210050123   |  kimbiw       |   Kimberly Wyss
